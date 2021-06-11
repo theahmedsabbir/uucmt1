@@ -1,0 +1,46 @@
+<?php
+
+use Illuminate\Database\Migrations\Migration;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Support\Facades\Schema;
+
+class CreateAnswersTable extends Migration
+{
+    /**
+     * Run the migrations.
+     *
+     * @return void
+     */
+    public function up()
+    {
+        Schema::create('answers', function (Blueprint $table) {
+            $table->increments('id');
+            $table->integer('exam_question_id')->unsigned();
+            $table->integer('user_id')->unsigned();
+            $table->string('answer')->nullable();
+            $table->integer('is_correct')->nullable();
+            $table->timestamps();
+
+
+
+            $table->foreign('exam_question_id')
+              ->references('id')->on('exam_questions')
+              ->onDelete('cascade');
+
+              // student
+            $table->foreign('user_id')
+              ->references('id')->on('users')
+              ->onDelete('cascade');
+        });
+    }
+
+    /**
+     * Reverse the migrations.
+     *
+     * @return void
+     */
+    public function down()
+    {
+        Schema::dropIfExists('answers');
+    }
+}

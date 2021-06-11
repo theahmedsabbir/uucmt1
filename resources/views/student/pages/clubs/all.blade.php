@@ -1,0 +1,76 @@
+@extends('student.template.master')
+
+@section('main_content')
+    <div id="main-content">
+        <div class="container-fluid">
+            <div class="block-header">
+                <div class="row">
+                    <div class="col-lg-6 col-md-8 col-sm-12">
+                        <h2><a href="javascript:void(0);" class="btn btn-xs btn-link btn-toggle-fullwidth"><i class="fa fa-arrow-left"></i></a>All Clubs</h2>
+                    </div>            
+                    <div class="col-lg-6 col-md-4 col-sm-12 text-right">
+                        <ul class="breadcrumb pull-right">
+                            <li class="breadcrumb-item"><a href="index.html"><i class="icon-home"></i></a></li>                            
+                            <li class="breadcrumb-item active">Clubs</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="row clearfix">
+                <div class="col-md-12">
+                    <div class="card parents-list">
+                        <div class="header">
+                            <h2><strong>Club</strong> List</h2>
+                        </div>
+                        <div class="body">
+                            @include('student.includes.messages')
+                            <div class="table-responsive">
+                                <table class="table table-hover m-b-0">
+                                    <thead class="thead-dark">
+                                        <tr>                                       
+                                            <th>#</th>
+                                            <th>Image</th>
+                                            <th>Name</th>
+                                            <th>Description</th>
+                                            <th>Phone</th>
+                                            <th>Email</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        @foreach ($clubs as $club)   
+
+                                            <tr>
+                                                <td>{{ $loop->index + 1 }}</td>
+                                                <td><span class="list-icon">
+                                                    <img class="rounded" src="
+
+                                                        @if ( !is_null($club->image) )
+                                                            {{ asset('backend/images/clubs/'.$club->image) }}
+                                                        @else
+                                                            {{ asset('backend/images/clubs/default2.png') }}
+                                                        @endif
+
+                                                    " alt="">
+                                                </span></td>
+                                                <td>{{ $club->name }} </td>
+                                                <td>{{ str_limit($club->description, 35, '...') }} </td>
+                                                <td>{{ $club->phone }} </td>
+                                                <td>{{ $club->email }} </td>
+                                                
+                                            </tr>
+                                        @endforeach
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+@endsection
+
+
+

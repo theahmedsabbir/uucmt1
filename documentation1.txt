@@ -1,0 +1,163 @@
+Title: UU CSE MANAGEMENT TOOL
+Technology: HTML, CSS, Bootstrap, JS, JQ, PHP, Laravel, MySQLi
+Resource May Follow:
+Demo Project: UU CSE STUDENT ERP
+Project URL: http://115.127.28.22/student/StudentFP
+
+
+
+
+User Role:
+==========
+1. Admin - Main Access Controller(registration) -Classroom, Exam, Course, Batch, Student, Teacher, Stuff, notice, 
+2. Teacher - Batch, student, notice, Attendence, 
+3. Students - General User
+4. Stuff - Admission Team - Course, Batch, Student, notice
+
+
+
+#
+- remember me - to do? 
+- register / forgot password
+- data table 
+- #additional user info
+- data show bad jacche 
+- batch/teacher delete - dependent course image not deleting 
+- edit left sidebar - tab name
+- admin - payment - update/delete
+
+
+*bad apatoto
+- #Blood Donation - CRUD - user, donation date, re-donation date, batch, id
+- #message
+- Canteen - CRUD
+- #Notifications - RU
+- Self Information - RU
+
+
+*important feature 
+- exam 
+- result 
+- payment
+- notice
+- library
+- Complain Box - RD
+- *Routine Management for All Batches - CRUD
+---------------------------------
+- people cross collaborate
+- frontend 
+- dashboard
+
+#1. Admin Specifications -  
+- Admin - CRUD#s
+- Teacher - CRUD#s
+- Batch - id, name, session, semester_id - CRUD#s
+- Student - CRUD#s
+- Office Stuff - CRUD#s
+- Semester - CRUD - id, name, start_date, end_date, year
+- Course - CRUDS - id, image, name, code, description, batch_id, user_id, semester_id, credit, link
+-- courseroom/posts/files - CRD
+-- comments - CRD
+- Exam - CRUD #
+-- Exam question - CRUD
+-- Question answer - CR
+- Result - R#
+- *#Payment - CRUD#
+- *Notice - CRUD
+- Library - CRUD 
+-- borrow 
+- #Bus Service - CRUD - #no update
+- Complain Box 
+- *Routine Management for All Batches - CRUD
+- Dashboard - welcome, notifications, some important stats 
+- #Club - CRUD#
+- Blood Donation
+#2. Teacher
+- Course(Self) - RUS 
+-- courseroom/posts/files - CRD
+-- comments - CRD
+-- Exam - CRUD #
+--- Exam question - CRUD
+--- answer/result - CRUD
+- Payment - R
+- Complain(Self) - C
+- Notice - R
+- Bus Service - R
+- Routine - R
+#4. Student 
+- Dashboard
+- Course(self) - R
+-- courseposts/files - R - self - CD
+-- comments - R - self - CD
+- Exam(open) - R
+-- Question answer(self) - C
+- Result - R
+- Routine - R
+- Notice - R
+- Library Books - R
+-- borrowed books - R
+- Payment(self) - R
+- Bus Service - R
+- Club - R
+- Blood Donation(self) - R
+- Complain Box - C
+*
+- admin - self profile
+- teacher - self profile
+- student - self profile
+#3. Stuff
+- Dashboard
+- stuff - self profile
+- Payment - CRUD
+- Notice - CRUD
+- Library - CRUD 
+-- borrow 
+- Bus Service - CRUD 
+- Complain Box - RD
+- Routine - CRUD
+- Club - CRUD
+- Blood Donation - CRUD
+*frontend to show
+-- notice
+-- faculty members
+-- course 
+- library#
+- club
+- bus 
+-----------------------------------------------------------------------
+
+
+
+
+
+*frontend theme 
+- academics - https://www.radiustheme.com/demo/html/academics/academics/index.html
+- gyan - http://themesitem.com/demos/html/gyan/gyan/index.html
+- http://max-themes.net/demos/kingster/kingster/index.html
+- http://www.nicdarkthemes.com/themes/education/html/demo/university/
+
+*backend theme 
+- http://www.wrraptheme.com/templates/lucid/university/html/light/index.html
+- http://radixtouch.in/templates/admin/smart/source/light/index.html
+
+
+
+
+*
+                                        @if ($teacher->designation == 1)
+                                            Chairman
+                                        @elseif ($teacher->designation == 2)
+                                            Associate Professor & Coordinator
+                                        @elseif ($teacher->designation == 3)
+                                            Associate Professor
+                                        @elseif ($teacher->designation == 4)
+                                            Assistant Professor & Coordinator
+                                        @elseif ($teacher->designation == 5)
+                                            Assistant Professor
+                                        @elseif ($teacher->designation == 6)
+                                            Senior Lecturer
+                                        @else
+                                            Lecturer
+                                        @endif
+
+
