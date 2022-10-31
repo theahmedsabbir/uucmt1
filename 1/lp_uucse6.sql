@@ -1,14 +1,13 @@
 -- phpMyAdmin SQL Dump
--- version 4.9.5
+-- version 5.0.2
 -- https://www.phpmyadmin.net/
 --
--- Host: localhost:3306
--- Generation Time: May 31, 2021 at 02:36 PM
--- Server version: 10.3.29-MariaDB
--- PHP Version: 7.3.28
+-- Host: 127.0.0.1
+-- Generation Time: Oct 31, 2022 at 04:28 PM
+-- Server version: 10.4.13-MariaDB
+-- PHP Version: 7.4.7
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-SET AUTOCOMMIT = 0;
 START TRANSACTION;
 SET time_zone = "+00:00";
 
@@ -19,7 +18,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `ahmedsab_lp_uucse`
+-- Database: `lp_uucse6`
 --
 
 -- --------------------------------------------------------
@@ -285,9 +284,7 @@ INSERT INTO `course_posts` (`id`, `course_id`, `user_id`, `post`, `created_at`, 
 (19, 3, 29, 'Sir I cant attend the class tomorrow for some problem', '2021-02-22 09:51:18', '2021-02-22 09:51:18'),
 (20, 4, 2, 'Assalamu alaikum .. please read these materials before class tomorrow', '2021-02-23 10:12:02', '2021-02-23 10:12:02'),
 (21, 1, 49, 'Sir assalamu alaikum', '2021-03-04 07:22:55', '2021-03-04 07:22:55'),
-(22, 1, 2, 'class is going to start .. join everyone', '2021-03-11 23:25:13', '2021-03-11 23:25:13'),
-(23, 1, 35, 'hello', '2021-03-20 23:37:37', '2021-03-20 23:37:37'),
-(24, 1, 1, 'skfjsdkfj', '2021-05-06 08:36:01', '2021-05-06 08:36:01');
+(23, 1, 35, 'hello', '2021-03-20 23:37:37', '2021-03-20 23:37:37');
 
 -- --------------------------------------------------------
 
@@ -558,11 +555,9 @@ INSERT INTO `post_comments` (`id`, `course_post_id`, `user_id`, `comment`, `crea
 (22, 16, 29, 'ok sir got it', '2021-02-23 10:13:21', '2021-02-23 10:13:21'),
 (23, 16, 2, 'thanks for responding', '2021-02-23 10:13:43', '2021-02-23 10:13:43'),
 (24, 21, 2, 'oalaimum assalam .. khobor nai keno ?', '2021-03-04 07:23:45', '2021-03-04 07:23:45'),
-(25, 22, 29, 'ok sir.. I am joining', '2021-03-11 23:25:51', '2021-03-11 23:25:51'),
-(27, 22, 2, 'ok', '2021-03-11 23:26:13', '2021-03-11 23:26:13'),
 (28, 19, 1, 'thank you', '2021-04-01 05:22:41', '2021-04-01 05:22:41'),
 (29, 19, 1, 'got it', '2021-04-01 05:23:19', '2021-04-01 05:23:19'),
-(30, 24, 1, 'thank you', '2021-05-06 08:36:16', '2021-05-06 08:36:16');
+(31, 11, 2, 'sdfsd', '2021-06-11 17:25:14', '2021-06-11 17:25:14');
 
 -- --------------------------------------------------------
 
@@ -597,9 +592,7 @@ INSERT INTO `post_files` (`id`, `course_post_id`, `file`, `created_at`, `updated
 (19, 17, 'artificial-intelligence-sessional6033bcf94b564_1614003449.png', '2021-02-22 08:17:29', '2021-02-22 08:17:29'),
 (22, 20, 'computer-communication-networks60352952a603f_1614096722.docx', '2021-02-23 10:12:02', '2021-02-23 10:12:02'),
 (23, 20, 'computer-communication-networks60352952a7025_1614096722.pdf', '2021-02-23 10:12:02', '2021-02-23 10:12:02'),
-(24, 22, 'project-ii604afb397e423_1615526713.pdf', '2021-03-11 23:25:13', '2021-03-11 23:25:13'),
-(25, 23, 'project-ii6056dba169154_1616305057.pdf', '2021-03-20 23:37:37', '2021-03-20 23:37:37'),
-(26, 24, 'project-ii6093fed154844_1620311761.png', '2021-05-06 08:36:01', '2021-05-06 08:36:01');
+(25, 23, 'project-ii6056dba169154_1616305057.pdf', '2021-03-20 23:37:37', '2021-03-20 23:37:37');
 
 -- --------------------------------------------------------
 
@@ -787,17 +780,17 @@ CREATE TABLE `users` (
 
 INSERT INTO `users` (`id`, `name`, `username`, `email`, `email_verified_at`, `password`, `phone`, `address`, `gender`, `bio`, `image`, `user_role`, `designation`, `is_approved`, `remember_token`, `created_at`, `updated_at`) VALUES
 (1, 'Sabbir Ahmed', 'sabbir', 'sabbir@uttarauniversity.edu.bd', NULL, '$2y$10$sWymPoNrsSZBWUPCdYko0ekMlBvEvrDanu.I36YAeEDA2INRHdqhm', '01723494591', '241/3, east nakhalpara, tejgaon, dhaka', 1, 'Coding is not an easy task to be as a normal programmer. But, If you try hard and keep a specific goal in your mind, then it is the simplest thing that makes you great. Let’s see who is in our popular computer programmers in the world for the 2017-2018 year.\r\n\r\nSo We are going to tell you about the Great Programmers in the World who makes our life more reliable and easy. By Which these worlds are connected to other people. It is very easy to technology by that coder, developer or we can say that Programmer. They are top best Coder of all the time.\r\n\r\nThe Programmer, like the poet, works only slightly removed from pure thought-stuff. He builds his castles in the air, from air, creating by exertion of the imagination.', 'sabbir-ahmed16140853026034fcb6e9b60.png', 1, NULL, 1, NULL, '2021-01-01 13:27:39', '2021-02-23 07:19:48'),
-(2, 'Golam Hafeez Siyam', 'siyam', 'siyam@uttarauniversity.edu.bd', NULL, '$2y$10$REXT7y4ueVV/cvzpPVjjGeRyAVTyXwtAKcLAkJOe0rrSsVq.cHWOS', '01723494592', '241/3, sector-12, uttara, dhaka', 1, NULL, 'golam-hafeez-siyam1612015053601565cd2c3ca.jpg', 2, '7', 1, NULL, '2021-01-01 13:27:43', '2021-03-13 04:17:21'),
-(3, 'Rafiqul Islam', 'rafiqul', 'rafiqul@uttarauniversity.edu.bd', NULL, '$2y$10$Vpymw3Vi2o.Bkkzp0MF4.eoq6RNsshybFINCvUnunDtBbc1iZYl9C', '01723494593', '241/3, road-6, basabo, khilgaon, dhaka', 1, NULL, NULL, 3, NULL, 1, NULL, '2021-02-01 13:27:48', NULL),
+(2, 'Golam Hafeez Siyam', 'siyam', 'teacher@uucmt.com', NULL, '$2y$10$1VU6QgQPBbjFbGK1hb8laumu8t0iA1BkXWEqtfRSMkTjoGMnRGLoK', '01723494592', '241/3, sector-12, uttara, dhaka', 1, NULL, 'golam-hafeez-siyam1612015053601565cd2c3ca.jpg', 2, '7', 1, NULL, '2021-01-01 13:27:43', '2021-06-11 16:38:04'),
+(3, 'Rafiqul Islam', 'rafiqul', 'stuff@uucmt.com', NULL, '$2y$10$79vKctpXaFCM0aUZwEA.Nu5I2bTgyKXIurNHVHqigTMsAbHI.R572', '01723494593', '241/3, road-6, basabo, khilgaon, dhaka', 1, NULL, NULL, 3, NULL, 1, NULL, '2021-02-01 13:27:48', '2021-06-11 16:57:54'),
 (4, 'Rabeya Islam Emu', '2172081011', '2172081011@uttarauniversity.edu.bd', NULL, '$2y$10$q05exNgCXM7/GguTZ8aI0Ogun0cyAVsgoWBJJCzLjN8A4laJ/2jAu', '01723494594', '241/3, dakhshinkhan, uttara, dhaka', 2, NULL, 'rabeya-islam-emu1614776830603f89fe2ee0f.png', 4, NULL, 1, NULL, '2020-12-01 13:27:10', '2021-03-03 07:07:10'),
-(5, 'Admin', 'admin', 'admin@uttarauniversity.edu.bd', NULL, '$2y$10$jFyZkBloRMVWAozjwRxOP.Il/yZ3GzGuuyxmwPyf9Ee7SEAYUsD5.', '01723494576', 'B-16/5, Govt. Officer\'s Quarter, Sector-8, Uttara', 1, NULL, NULL, 1, NULL, 1, NULL, '2021-01-28 10:03:23', '2021-03-13 04:14:50'),
+(5, 'Admin', 'admin', 'admin@uttarauniversity.edu.bd', NULL, '$2y$10$r3xieDo8c6HFaMJjQ0wRpOTqFEfC53QGwo9RS0UGp/CYhQ0vdlF9.', '01723494576', 'B-16/5, Govt. Officer\'s Quarter, Sector-8, Uttara', 1, NULL, NULL, 1, NULL, 1, NULL, '2021-01-28 10:03:23', '2021-03-13 04:14:50'),
 (7, 'Dr Shirin Sorna', 'Sorno', 'sorno@gmail.com', NULL, '$2y$10$x/jWTpcA.SYfi8yyDmVQFOLgYM2/DI4N7qdEG413BwYOsO1Kkamr2', '0178989565', 'Mirpur Dhaka', 2, NULL, 'dr-shirin-sorna161194047360144279e992c.jpg', 1, NULL, 1, NULL, '2021-01-28 10:10:13', '2021-01-29 11:14:33'),
 (18, 'AL SHAHRIAR RUBEL', '23432423', 'rubel@uttarauniversity.edu.bd', NULL, '$2y$10$qbsopcErjxKnvVMKFjcdW.X5P6jHEXcVumjJfFfoxRuJlWkYbiXsi', '017234232394324324591', 'Cha-73/3, North Badda, Gulshan', 1, 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas in finibus neque. Vivamus in ipsum quis elit vehicula tempus vitae quis lacus. Vestibulum interdum diam non mi cursus venenatis. Morbi lacinia libero et elementum vulputate. Vivamus et facilisis mauris. Maecenas nec massa auctor, ultricies massa eu, tristique erat. Vivamus in ipsum quis elit vehicula tempus vitae quis lacus. Eu pellentesque, accumsan tellus leo, ultrices mi dui lectus sem nulla eu.Eu pellentesque, accumsan tellus leo, ultrices mi dui\r\n\r\nlectus sem nulla eu. Maecenas arcu, nec ridiculus quisque orci, vulputate mattis risus erat. lectus sem nulla eu.Eu pellentesque, accumsan tellus leo, ultrices mi dui lectus sem nulla eu. Maecenas arcu, nec ridiculus quisque orci, vulputate mattis risus erat.', 'al-shahriar-rubel1612015569601567d18f387.jpg', 2, '7', 1, NULL, '2021-01-30 07:06:36', '2021-02-28 07:20:52'),
 (19, 'RIASAAD HAQUE', '170684', 'sadi@uttarauniversity.edu.bd', NULL, '$2y$10$T0Qo9XL1M7d7MZumVrlIS.4TmLiDWIDpWss.AEckkNg1i1yVNExLK', '01898494591', '8 Banani, Road#17a, Dhaka', 1, 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.', 'riasaad-haque16120156746015683aa7236.jpg', 2, '6', 1, NULL, '2021-01-30 07:22:42', '2021-02-28 07:20:17'),
 (21, 'SAMIRAH ANWAR', '180812', 'samirah@uttarauniversity.edu.bd', NULL, '$2y$10$gf9yT0tQYbgFxLhXKTrOSuYdAX4asgX/nY4tdo82IpEAgLqrYxrAG', '+88029349394', '17, Moghbazar, New Eskaton Road', 2, 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.', 'samirah-anwar161201679360156c995b65c.jpg', 2, '7', 1, NULL, '2021-01-30 08:26:33', '2021-02-28 07:22:33'),
-(29, 'Farhan Siddique Sadi', '2172081009', '2172081009@uttarauniversity.edu.bd', NULL, '$2y$10$Ol.gak6hXGj4WaHzQ8BlOehvQgBmS8PrjoVc50pj9p.Yj4o..2wuy', '880029121542', '1b Sonargaon Road, Dhaka', 1, 'What Goes around, Comes around 😎', 'farhan-siddique-sadi16121122946016e1a630ff7.jpg', 4, NULL, 1, NULL, '2021-01-31 10:39:45', '2021-03-13 00:37:28'),
+(29, 'Farhan Siddique Sadi', '2172081009', '2172081009@uttarauniversity.edu.bd', NULL, '$2y$10$e2PRzvIlAHsKIqz/lQf11O9rk11XVfLo..l8cT35oRfV2wSHIRNg2', '880029121542', '1b Sonargaon Road, Dhaka', 1, 'What Goes around, Comes around ????', 'farhan-siddique-sadi16121122946016e1a630ff7.jpg', 4, NULL, 1, NULL, '2021-01-31 10:39:45', '2022-01-10 16:42:38'),
 (34, 'Afsana Alam', '2172081013', '2172081013@uttarauniversity.edu.bd', NULL, '$2y$10$EVCeu2qIDe.D.KOXPIiQBu8G.Z3ZkNMFqZEOUayJomQ8ZaIfV2PFW', '01842259466', 'sector-8, uttara', 2, 'She attended college of Uttara Girls School & College', NULL, 4, NULL, 1, NULL, '2021-02-10 09:01:30', '2021-05-06 08:39:41'),
-(35, 'Farhan Siddique Sadi', 'farhan', 'farhan@uttarauniversity.edu.bd', NULL, '$2y$10$1rdXX44sWPIyE/G6YI1Qt.6NpU33lyV8I9nW5qo2970eMf.9r0CSW', '05594488778', '2851 Island Avenue', 1, NULL, 'farhan-siddique-sadi1614534440603bd7286d207.jpg', 1, NULL, 1, NULL, '2021-02-28 11:47:20', '2021-02-28 11:47:20'),
+(35, 'Farhan Siddique Sadi', 'farhan', 'admin@uucmt.com', NULL, '$2y$10$r3xieDo8c6HFaMJjQ0wRpOTqFEfC53QGwo9RS0UGp/CYhQ0vdlF9.', '05594488778', '2851 Island Avenue', 1, NULL, 'farhan-siddique-sadi1614534440603bd7286d207.jpg', 1, NULL, 1, NULL, '2021-02-28 11:47:20', '2021-06-11 16:36:11'),
 (36, 'Rabeya Islam Emu', 'rabeya', 'rabeya@uttarauniversity.edu.bd', NULL, '$2y$10$QGnAUA/swUeFYFbXqSnpxOhXDoKaM0DahfdSN0fGBmR9IjSuMghjK', '01956447855664', '2851 Island Avenue', 2, NULL, 'rabeya-islam-emu1614596526603cc9ae7b8f8.PNG', 1, NULL, 1, NULL, '2021-02-28 12:07:00', '2021-03-18 03:12:19'),
 (37, 'Afsana Alam', 'afsana', 'afsana@uttarauniversity.edu.bd', NULL, '$2y$10$HTNGS1voWc44TMZLFuDpPeNf3Boy8pYnqEASVvaYpK1.HtMROG4uW', '0159989756654', '2851 Island Avenue', 2, NULL, NULL, 1, NULL, 1, NULL, '2021-02-28 12:07:54', '2021-02-28 12:07:54'),
 (38, 'DR. MD. MIJANUR RAHMAN', 'mizanur.cse', 'mizanur.cse@uttarauniversity.edu.bd', NULL, '$2y$10$n5vzvNG299Q4JbkUhTrRgugLOapdaGaZM4oGpvkqUnqbrvyADS0hG', '01402796321', 'uttara dhaka-1230', 1, 'Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in laying out print, graphic or web designs. The passage is attributed to an unknown typesetter in the 15th century who is thought to have scrambled parts of Cicero\'s De Finibus Bonorum et Malorum for use in a type specimen book.', 'dr-md-mijanur-rahman1614598697603cd2299ebeb.PNG', 2, '1', 1, NULL, '2021-03-01 05:24:05', '2021-03-01 05:38:17'),
@@ -1111,7 +1104,7 @@ ALTER TABLE `payments`
 -- AUTO_INCREMENT for table `post_comments`
 --
 ALTER TABLE `post_comments`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=31;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=32;
 
 --
 -- AUTO_INCREMENT for table `post_files`
